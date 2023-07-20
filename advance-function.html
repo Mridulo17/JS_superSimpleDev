@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance feature</title>
+</head>
+<body>
+    <button class="js-button">click</button>
+
+    <script>
+        // object1 = {
+        //     num: 2,
+        //     fun: function greeting() {
+        //         console.log('hello3');
+        //     }
+        // };
+        // object1.fun();
+
+        // function display(params) {
+        //     console.log(params);
+        // }
+        // display(2);
+
+        // function run(params) {
+        //     params();
+        // }
+        // run(function() {
+        //     console.log('hello4');
+        // });
+
+        // setTimeout(function() {
+        //     console.log('hello');
+        // }, 3000);
+        // console.log('timeout')
+
+        // setInterval(function() {
+        //     console.log('interval');
+        // }, 3000);
+
+        const buttonElement = document.querySelector('.js-button')
+        const eventListener = () => {
+            console.log('click');
+        };
+        buttonElement.addEventListener('click', eventListener);
+        buttonElement.removeEventListener('click', eventListener);
+        buttonElement.addEventListener('mouseover', () => {
+            console.log('click2');
+        });
+
+        console.log([1, -3, 5].filter((value, index) => {
+            // if( value >= 0) {
+            //     return true;
+            // } else {
+            //     return false;
+            // }
+            return value >= 0;
+        }));
+
+        
+        console.log([1, 1, 3].map((value, index) => {
+            return value * 2;
+        }));
+    </script>
+</body>
+</html>
